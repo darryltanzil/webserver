@@ -30,7 +30,7 @@ std::string WebServer::fileContent;
 
     ThreadPool pool(2000);  // Thread pool for handling requests
 
-    while (true) {
+    while (running) {
         clientAddressLength = sizeof(clientAddress);
         clientSocket = accept(serverSocket, (struct sockaddr*)&clientAddress, &clientAddressLength);
 
@@ -138,12 +138,7 @@ void WebServer::LoadFileContent() {
 }
 
 void WebServer::Stop() {
-    // Implement the logic to stop the server here.
-    // For example, you can close the server socket.
-    if (serverSocket != -1) {
-        close(serverSocket);
-        serverSocket = -1; // Set to an invalid value to indicate it's closed.
-    }
+    running = false;
 }
 
 
