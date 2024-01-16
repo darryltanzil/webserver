@@ -15,7 +15,7 @@ This is a simple implementation of a web server in C++ with a built-in thread po
 <br> **HTTP Protocol Management:** Parses HTTP requests and constructs appropriate responses, setting standard headers.
 <br> **Scalability and Responsiveness:** Maintains the main thread's availability for incoming connections.
 #### Threadpool Class
-<br> **Thread Management:** Initializes with a fixed number of threads to handle incoming tasks.
+**Thread Management:** Initializes with a fixed number of threads to handle incoming tasks.
 <br> **Task Queuing and Execution:** Allows enqueuing of tasks (jobs) which are then executed by available worker threads.
 <br> **Resource Utilization:** Reduces the overhead of continuous thread creation and deletion.
 <br> **Optimization and Performance**
