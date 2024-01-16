@@ -30,7 +30,7 @@ cmake --build build
 cd build && ./webserver
 
 # Run tests for web server
-cd build && ./webserver
+cd build && ctest
 ```
 
 The index.html page will be viewable!
