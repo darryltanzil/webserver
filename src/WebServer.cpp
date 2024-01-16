@@ -137,6 +137,16 @@ void WebServer::LoadFileContent() {
     }
 }
 
+void WebServer::Stop() {
+    // Implement the logic to stop the server here.
+    // For example, you can close the server socket.
+    if (serverSocket != -1) {
+        close(serverSocket);
+        serverSocket = -1; // Set to an invalid value to indicate it's closed.
+    }
+}
+
+
 int main() {
     WebServer server;
     server.Start();

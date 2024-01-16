@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <netinet/in.h>
 
 // Forward declaration of ThreadPool to avoid including its header.
 class ThreadPool;
@@ -11,6 +12,11 @@ public:
      * Start: Initializes the web server and starts listening for client connections.
      */
     [[noreturn]] void Start();
+
+    /**
+     *  Stop: Stops the web server.
+     */
+    void Stop();
 
 private:
     /**

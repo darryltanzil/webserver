@@ -13,32 +13,24 @@ Before you can run the web server, ensure that you have the following prerequisi
 
 ## Building the Project
 
-Follow these steps to build the project using CMake:
+Follow these steps to build/run/test the project using CMake:
 
-```
+```bash
 # Navigate to the project directory:
 cd webserver
 
-# Create a build directory:
-mkdir build
-
-# Enter the build directory:
-cd build
-
-# Run CMake to configure the project:
-cmake ..
+# Set project directory to current, and build directory to build folder
+cmake -S . -B build
 
 # Make or insert your index.html into the build directory.
-# Build the project using your C++ compiler (e.g., g++, Xcode, Visual Studio):
-cmake --build .
+# Build the project
+cmake --build build
+
+# Run the webserver
+cd build && ./webserver
+
+# Run tests for web server
+cd build && ./webserver
 ```
 
-To run:
-```
-# From the build directory, navigate to the "bin" directory:
-cd bin
-
-# Start the web server by running the executable:
-./webserver
-```
 The index.html page will be viewable!
