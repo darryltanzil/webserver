@@ -9,13 +9,13 @@ This is a simple implementation of a web server in C++ with a built-in thread po
 #### WebServer Class
 
 **Network Communication:** Uses TCP/IP sockets for stable and reliable data exchange. 
-<br> **Concurrency Handling**: Leverages a ThreadPool for managing simultaneous client requests.
+**Concurrency Handling**: Leverages a ThreadPool for managing simultaneous client requests.
 <br> **Request Processing:** Each client connection is handled in a dedicated thread from the pool.
 <br> **Content Serving:** Preloads "index.html" into memory to minimize I/O operations.
 <br> **HTTP Protocol Management:** Parses HTTP requests and constructs appropriate responses, setting standard headers.
 <br> **Scalability and Responsiveness:** Maintains the main thread's availability for incoming connections.
 #### Threadpool Class
-<br> **Thread Management:** Initializes with a fixed number of threads to handle incoming tasks.
+**Thread Management:** Initializes with a fixed number of threads to handle incoming tasks.
 <br> **Task Queuing and Execution:** Allows enqueuing of tasks (jobs) which are then executed by available worker threads.
 <br> **Resource Utilization:** Reduces the overhead of continuous thread creation and deletion.
 <br> **Optimization and Performance**
