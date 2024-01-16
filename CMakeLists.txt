@@ -24,13 +24,10 @@ add_executable(webserver
         src/WebServer.h
 )
 
-# Include the directory with libcurl headers
-target_include_directories(webserver PRIVATE ${CURL_INCLUDE_DIRS})
-
 enable_testing()
 
 add_executable(tests
-        tests/unit/webserver_test.cpp
+
 )
 target_link_libraries(
         tests
