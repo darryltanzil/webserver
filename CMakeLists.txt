@@ -16,7 +16,6 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-# Add the necessary source files for your project and tests
 add_executable(webserver
         src/ThreadPool.cpp
         src/ThreadPool.h
@@ -24,15 +23,15 @@ add_executable(webserver
         src/WebServer.h
 )
 
-enable_testing()
-
-add_executable(tests
-
-)
-target_link_libraries(
-        tests
-        GTest::gtest_main
-)
-
-include(GoogleTest)
-gtest_discover_tests(tests)
+#enable_testing()
+#
+#add_executable(tests
+#
+#)
+#target_link_libraries(
+#        tests
+#        GTest::gtest_main
+#)
+#
+#include(GoogleTest)
+#gtest_discover_tests(tests)
