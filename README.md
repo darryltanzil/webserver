@@ -8,21 +8,19 @@ This is a simple implementation of a web server in C++ with a built-in thread po
 
 #### WebServer Class
 
-**Network Communication:** Uses TCP/IP sockets for stable and reliable data exchange.
-**Concurrency Handling**: Leverages a ThreadPool for managing simultaneous client requests.
-**Request Processing:** Each client connection is handled in a dedicated thread from the pool.
-**Content Serving:** Preloads "index.html" into memory to minimize I/O operations.
-**HTTP Protocol Management:** Parses HTTP requests and constructs appropriate responses, setting standard headers.
-**Scalability and Responsiveness:** Maintains the main thread's availability for incoming connections.
-
+**Network Communication:** Uses TCP/IP sockets for stable and reliable data exchange. 
+<br> **Concurrency Handling**: Leverages a ThreadPool for managing simultaneous client requests.
+<br> **Request Processing:** Each client connection is handled in a dedicated thread from the pool.
+<br> **Content Serving:** Preloads "index.html" into memory to minimize I/O operations.
+<br> **HTTP Protocol Management:** Parses HTTP requests and constructs appropriate responses, setting standard headers.
+<br> **Scalability and Responsiveness:** Maintains the main thread's availability for incoming connections.
 #### Threadpool Class
-**Thread Management:** Initializes with a fixed number of threads to handle incoming tasks.
-**Task Queuing and Execution:** Allows enqueuing of tasks (jobs) which are then executed by available worker threads.
-**Resource Utilization:** Reduces the overhead of continuous thread creation and deletion.
-**Optimization and Performance**
-**Memory Management**: Uses string streams for file reading and a fixed-size buffer for network data, saving memory
-**Load Optimization:** Preloads frequently accessed content, reducing repetitive index.html access.
-
+<br> **Thread Management:** Initializes with a fixed number of threads to handle incoming tasks.
+<br> **Task Queuing and Execution:** Allows enqueuing of tasks (jobs) which are then executed by available worker threads.
+<br> **Resource Utilization:** Reduces the overhead of continuous thread creation and deletion.
+<br> **Optimization and Performance**
+<br> **Memory Management**: Uses string streams for file reading and a fixed-size buffer for network data, saving memory
+<br> **Load Optimization:** Preloads frequently accessed content, reducing repetitive index.html access.
 ## Prerequisites
 
 Before you can run the web server, ensure that you have the following prerequisites installed on your system:
