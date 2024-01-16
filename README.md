@@ -28,6 +28,7 @@ cd build
 # Run CMake to configure the project:
 cmake ..
 
+# Make or insert your index.html into the build directory.
 # Build the project using your C++ compiler (e.g., g++, Xcode, Visual Studio):
 cmake --build .
 ```
