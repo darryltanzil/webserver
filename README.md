@@ -18,7 +18,6 @@ This is a simple implementation of a web server in C++ with a built-in thread po
 **Thread Management:** Initializes with a fixed number of threads to handle incoming tasks.
 <br> **Task Queuing and Execution:** Allows enqueuing of tasks (jobs) which are then executed by available worker threads.
 <br> **Resource Utilization:** Reduces the overhead of continuous thread creation and deletion.
-<br> **Optimization and Performance**
 <br> **Memory Management**: Uses string streams for file reading and a fixed-size buffer for network data, saving memory
 <br> **Load Optimization:** Preloads frequently accessed content, reducing repetitive index.html access.
 ## Prerequisites
